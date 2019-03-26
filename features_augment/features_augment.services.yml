@@ -1,0 +1,28 @@
+services:
+  features_augment.features_manager:
+    class: Drupal\features_augment\FeaturesAugmentManager
+    decorates: features.manager
+    decoration_priority: 9
+    arguments:
+      - '@features_augment.features_manager.inner'
+      - '@app.root'
+      - '@entity.manager'
+      - '@config.factory'
+      - '@config.storage'
+      - '@config.manager'
+      - '@module_handler'
+      - '@features.config_update'
+      - '@config_augment.config_augmenter'
+  features_augment.config_update:
+    class: Drupal\features_augment\FeaturesAugmentConfigReverter
+    decorates: features.config_update
+    decoration_priority: 9
+    arguments:
+      - '@features_augment.config_update.inner'
+      - '@entity.manager'
+      - '@config.storage'
+      - '@features.extension_storage'
+      - '@features.extension_optional_storage'
+      - '@config.factory'
+      - '@event_dispatcher'
+      - '@config_augment.config_augmenter'

@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Contains config_augment.module.
+ */
+
+/**
+ * Implements hook_module_preinstall().
+ */
+function config_augment_module_preinstall($module) {
+  /** @var \Drupal\Core\Extension\ModuleHandlerInterface $handler */
+  $handler = \Drupal::service('module_handler');
+
+  /** @var \Drupal\config_augment\Config\ConfigAugmenterInterface $service */
+  $service = \Drupal::service('config_augment.config_augmenter');
+
+  // Apply the augmentations to the module.
+  $service->applyExtensionAugmentations($handler->getModule($module));
+}

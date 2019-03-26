@@ -1,0 +1,9 @@
+services:
+  config_augment.config_augmenter:
+    class: Drupal\config_augment\Config\ConfigAugmenter
+    arguments: ['@config.factory', '@config.manager', '@module_handler', '@entity_type.manager', '@event_dispatcher', '@logger.channel.config_augment']
+
+  logger.channel.config_augment:
+    class: Drupal\Core\Logger\LoggerChannel
+    factory: logger.factory:get
+    arguments: ['config_augment']

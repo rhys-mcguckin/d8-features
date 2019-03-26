@@ -1,0 +1,8 @@
+name: Configuration Augment Test
+type: module
+description: 'Support module for Configuration augment testing. Provides a content type.'
+core: 8.x
+package: Testing
+dependencies:
+ - node
+ - language

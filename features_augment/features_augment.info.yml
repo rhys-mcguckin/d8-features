@@ -1,0 +1,8 @@
+name: 'Features Augment'
+type: module
+description: 'Provides augmentation of features through configuration augmentation.'
+core: 8.x
+package: 'Configuration'
+dependencies:
+  - features
+  - config_augment

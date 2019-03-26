@@ -1,0 +1,14 @@
+{
+  "name": "drupal/config_augment",
+  "type": "drupal-module",
+  "description": "Provides augmentation of config by rewriting config on module install.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/config_augment",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/config_augment",
+    "source": "http://cgit.drupalcode.org/config_augment"
+  },
+  "require": { }
+}

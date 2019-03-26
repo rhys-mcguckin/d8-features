@@ -1,0 +1,14 @@
+{
+  "name": "drupal/features_augment",
+  "type": "drupal-module",
+  "description": "Provides augmentation of features through configuration augmentation.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/features_augment",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/features_augment",
+    "source": "http://cgit.drupalcode.org/features_augment"
+  },
+  "require": { }
+}
